@@ -22,7 +22,7 @@ jobs:
           key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
           restore-keys: ${{ runner.os }}-mint-
       - name: Install dependencies
-        run: sh ./bootstrap.sh
+        run: bootstrap.sh
       - name: Run code validation
         run: bundle exec danger
         env:
